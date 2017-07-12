@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Inicializando o Jquery - Luciano Medeiros -->
+
+<title> Luciano - Seletores </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	
+			$(document).ready(function(){
+				
+				$('h2').css('margin','0');
+			$('p').css({margin:'0', color:'blue'});
+			$('.div1').css({'margin-bottom':'20px', background:'#ccc'});
+			
+			// Filhas
+			
+			$('.div1 span').hide().delay('1000').fadeIn(1000).css({color:'green','font-size':'15px'});
+		$('.div1 h2').hide().css({'font-size':'50px', color:'red'}).fadeIn(800);
+    
+	
+	// Filhas Diretas do Elemento
+	
+	$('.div1 > span').css({color:'red'});
+	
+	// Atacando o proximo elemento do selecionado
+	
+	$('.p1 + p').css({'font-size':'25px'});
+	
+	// Atacando o todos os elementos apos o selecionado
+	
+		$('.p1 ~ p').css({'font-size':'25px'});
+	
+});
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<div class="div1">
+
+<h2> H2 filho de DIV1</h2>
+
+<p> P Filho de DIV1 <span> Span Filho de P</span></p>
+
+<span> Span filho de DIV1 </span>
+
+</div>
+
+<h2> H2 fora de DIV1 </h2>
+<p class="p1"> p1 Fora da DIV!</p>
+
+<p> p2 fora de Div1 </p>
+
+<p> p3 Fora de Div1 </p3>
+
+
+
+
+</body>
+</html>
